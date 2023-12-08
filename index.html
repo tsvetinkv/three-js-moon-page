@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Moon App</title>
+  <link rel="stylesheet" href="./uikit-3.17.11/css/uikit.css" />
+  <link rel="stylesheet" href="./uikit-3.17.11/css/uikit-rtl.css" />
+  <link rel="stylesheet" href="./uikit-3.17.11/css/uikit-rtl.min.css" />
+  <link rel="stylesheet" href="./uikit-3.17.11/css/uikit.min.css" />
+
+</head>
+
+<body>
+
+  <div class="uk-card uk-card-secondary uk-grid-collapse uk-child-width-1-2@s uk-margin uk-grid" id="horizontalCard">
+    <div class="uk-flex uk-flex-middle uk-text-center uk-width-viewport">
+      <div class="uk-card-media-left uk-cover-container uk-first-column uk-width-xlarge">
+        <div class="canvas-container">
+          <canvas id="webgl1"></canvas>
+        </div>
+      </div>
+      <div>
+        <div class="uk-card-body">
+          <h1 class="uk-heading-small">Do you want to learn about the moon?</h1>
+          <p class="uk-text-center\@s uk-text-center\@m uk-text-center\@l uk-text-center\@xl uk-text-lead">
+            If you want to learn more about the moon phases,
+            events and much more then check this page
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="uk-card uk-card-secondary" id="verticalCard">
+    <div class="uk-card-media-top">
+      <div class="canvas-container">
+        <canvas id="webgl2"></canvas>
+      </div>
+    </div>
+    <div class="uk-card-body">
+      <h1 class="uk-heading-small">Do you want to learn about the moon?</h1>
+      <p class="uk-text-center\@s uk-text-center\@m uk-text-center\@l uk-text-center\@xl">
+        If you want to learn more about the moon phases,
+        events and much more then check this page
+      </p>
+    </div>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.17.11/dist/js/uikit.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.17.11/dist/js/uikit-icons.min.js"></script>
+  <script type="module" src="/main.js"></script>
+</body>
+
+</html>

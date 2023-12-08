@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#verticalCard {
+  display: none;
+}
+
+#horizontalCard {
+  display: block;
+}
+
+.canvas-container {
+  overflow: hidden;
+}
+
+@media screen and (max-width: 800px) {
+  .canvas-container {
+    order: 2;
+  }
+}
+
+.uk-card {
+  background: rgb(90, 89, 88);
+  background: linear-gradient(0deg, rgb(30, 30, 30) 0%, rgb(35, 35, 35) 50%, rgb(40, 40, 40) 100%);
+}
+
+@media (max-width:800px) {
+  #verticalCard {
+    display: block;
+  }
+
+  #horizontalCard {
+    display: none;
+  }
+}
