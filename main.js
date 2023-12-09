@@ -28,7 +28,7 @@ let w;
 if (window.innerWidth < 800) {
   w = window.innerWidth;
 } else {
-  w = window.innerWidth / 2;
+  w = window.innerWidth / 3;
 }
 let h = window.innerHeight / 2;
 
