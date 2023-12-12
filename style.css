@@ -27,6 +27,29 @@
   background: linear-gradient(0deg, rgb(30, 30, 30) 0%, rgb(35, 35, 35) 50%, rgb(40, 40, 40) 100%);
 }
 
+.scale {
+  display: inline;
+}
+
+.scale img {
+  height: 20px;
+  width: 50%;
+}
+
+.uk-text-background {
+  display: block;
+}
+
+.units {
+  text-align: center;
+  width: 77%;
+}
+
+.unitsSmall {
+  text-align: center;
+  width: 58%;
+}
+
 @media (max-width:800px) {
   #verticalCard {
     display: block;
@@ -34,5 +57,27 @@
 
   #horizontalCard {
     display: none;
+  }
+
+  .scale img {
+    height: 20px;
+    width: auto;
+  }
+
+  .scale {
+    display: inline-block;
+    width: 90vw;
+  }
+
+  .units {
+    width: 90vw;
+  }
+
+  .unitsSmall {
+    width: 85vw;
+  }
+
+  #elevationCard, #gravityCard, #hydrogenCard, #roughnessCard, .canvas-container {
+    text-align: center;
   }
 }

@@ -15,14 +15,14 @@
 
 <body>
 
-  <div class="uk-card uk-card-secondary uk-grid-collapse uk-child-width-1-2@s uk-margin uk-grid" id="horizontalCard">
+  <div class="uk-card uk-card-secondary uk-grid-collapse uk-child-width-1-3@s uk-grid" id="horizontalCard">
     <div class="uk-flex uk-flex-middle uk-text-center uk-width-viewport uk-align-center uk-animation-fade">
       <div class="uk-card-media-left uk-cover-container uk-first-column uk-width-xlarge">
         <div class="canvas-container">
           <canvas id="webgl1"></canvas>
         </div>
       </div>
-      <div class="uk-width-1-2">
+      <div class="uk-width-1-3">
         <div class="uk-card-body uk-width-1-1">
           <h1 class="uk-heading-small">Do you want to learn about the moon?</h1>
           <hr>
@@ -48,6 +48,131 @@
         If you want to learn more about the moon phases,
         events and much more then check this page
       </p>
+    </div>
+  </div>
+
+  <h1 class="uk-heading-medium uk-text-center">Data Maps</h1>
+
+  <div class="uk-card uk-card-secondary uk-grid-collapse uk-child-width-1-3@s uk-grid" uk-grid id="elevationCard" >
+    <div class="uk-flex-last@s uk-card-media-right uk-cover-container">
+      <div class="canvas-container">
+        <canvas id="webgl3"></canvas>
+      </div>
+    </div>
+    <div class="uk-first-column">
+      <div class="uk-card-body uk-width-1-3\@xl uk-width-1-3\@l uk-width-1-3\@m">
+        <button class="uk-button uk-button-default">Digital elevation model</button>
+        <div uk-dropdown="" class="uk-drop uk-dropdown">
+          <ul class="uk-nav uk-dropdown-nav">
+            <li class="gravity">Gravity map</li>
+            <li class="hydrogen">Hydrogen​ ​Abundance</li>
+            <li class="roughness">Surface​ ​Roughness</li>
+          </ul>
+        </div>
+        <p>Topographic​ ​Moon​ ​map​ ​created​ ​by <br> ​ ​Lunar​ ​Reconnaissance​ ​Orbiter.</p>
+        <br>
+        <div style="width: 95%;">
+          <p class="units">Elev (m)</p>
+          <div class="scale" class="uk-transform-center">
+            <span>-9128</span>
+            <img src="assets/elevationScale.png">
+            <span>10781</span>
+          </div>
+        </div>
+        <br>
+        <a class="uk-text-background" href="#">Leran more ></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="uk-card uk-card-secondary uk-grid-collapse uk-child-width-1-3@s uk-grid" uk-grid id="gravityCard">
+    <div class="uk-flex-last@s uk-card-media-right uk-cover-container">
+      <div class="canvas-container">
+        <canvas id="webgl4"></canvas>
+      </div>
+    </div>
+    <div class="uk-first-column">
+      <div class="uk-card-body uk-width-1-3\@xl uk-width-1-3\@l uk-width-1-3\@m">
+        <button class="uk-button uk-button-default">Gravity map</button>
+        <div uk-dropdown="" class="uk-drop uk-dropdown">
+          <ul class="uk-nav uk-dropdown-nav">
+            <li class="elevation">Digital elevation model</li>
+            <li class="hydrogen">Hydrogen​ ​Abundance</li>
+            <li class="roughness">Surface​ ​Roughness</li>
+          </ul>
+        </div>
+        <p>Global​ ​lunar​ ​gravity​ ​survey​ ​created <br>​ ​by​ ​the​ ​twin​ ​GRAIL​ ​spacecraft.</p>
+        <div style="width: 80%;">
+          <p class="units">mGal</p>
+          <div class="scale">
+            <span>-487</span>
+            <img src="assets/gravityScale.png">
+            <span>515</span>
+          </div>
+        </div>
+        <br>
+        <a class="uk-text-background" href="#">Leran more ></a>
+      </div>
+    </div>
+  </div>
+  <div class="uk-card uk-card-secondary uk-grid-collapse uk-child-width-1-3@s uk-grid" uk-grid id="hydrogenCard">
+    <div class="uk-flex-last@s uk-card-media-right uk-cover-container">
+      <div class="canvas-container">
+        <canvas id="webgl5"></canvas>
+      </div>
+    </div>
+    <div class="uk-first-column">
+      <div class="uk-card-body uk-width-1-3\@xl uk-width-1-3\@l uk-width-1-3\@m">
+        <button class="uk-button uk-button-default">Hydrogen​ ​Abundance</button>
+        <div uk-dropdown="" class="uk-drop uk-dropdown">
+          <ul class="uk-nav uk-dropdown-nav">
+            <li class="elevation">Digital elevation model</li>
+            <li class="gravity">Gravity map</li>
+            <li class="roughness">Surface​ ​Roughness</li>
+          </ul>
+        </div>
+        <p>The​ ​presence​ ​of​ ​hydrogen​ ​may <br>​ ​indicate​ ​the​ ​presence​ ​of​ ​water.</p>
+        <div style="width: 80%;">
+          <p class="unitsSmall">PPM BY WEIGHT</p>
+          <div class="scale">
+            <span>0</span>
+            <img src="assets/hydrogenScale.png">
+            <span>195.5</span>
+          </div>
+        </div>
+        <br>
+        <a class="uk-text-background" href="#">Leran more ></a>
+      </div>
+    </div>
+  </div>
+  <div class="uk-card uk-card-secondary uk-grid-collapse uk-child-width-1-3@s uk-grid" uk-grid id="roughnessCard">
+    <div class="uk-flex-last@s uk-card-media-right uk-cover-container">
+      <div class="canvas-container">
+        <canvas id="webgl6"></canvas>
+      </div>
+    </div>
+    <div class="uk-first-column">
+      <div class="uk-card-body uk-width-1-3\@xl uk-width-1-3\@l uk-width-1-3\@m">
+        <button class="uk-button uk-button-default">Surface​ ​Roughness</button>
+        <div uk-dropdown="" class="uk-drop uk-dropdown">
+          <ul class="uk-nav uk-dropdown-nav">
+            <li class="elevation">Digital elevation model</li>
+            <li class="gravity">Gravity map</li>
+            <li class="hydrogen">Hydrogen​ ​Abundance</li>
+          </ul>
+        </div>
+        <p>Rough​ ​surfaces​ ​indicate​ ​the <br>​ ​presence​ ​of​ ​large ​rocks.</p>
+        <div style="width: 80%;">
+          <p class="unitsSmall">RMS (m)</p>
+          <div class="scale">
+            <span>0</span>
+            <img src="assets/rougnessScale.png">
+            <span>4</span>
+          </div>
+        </div>
+        <br>
+        <a class="uk-text-background" href="#">Leran more ></a>
+      </div>
     </div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/uikit@3.17.11/dist/js/uikit.min.js"></script>
