@@ -6,6 +6,9 @@
 html, body{
   overflow-x: clip;
 }
+body{
+  background: linear-gradient(0deg, rgba(43, 2, 85, 1) 0%, rgba(5, 26, 70, 1) 100%);
+}
 #verticalCard {
   display: none;
 }

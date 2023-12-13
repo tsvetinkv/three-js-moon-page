@@ -1,4 +1,4 @@
-import './style.css'
+import "./style.css";
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import moonTexture from "./assets/moon-texture.jpg";
@@ -26,7 +26,6 @@ const geometry = new THREE.SphereGeometry(3, 64, 64);
 const textureLoader = new THREE.TextureLoader();
 const texture = textureLoader.load(moonTexture);
 const displacementMap = textureLoader.load(moonDisplacementMap);
-
 
 // add material
 const material = new THREE.MeshStandardMaterial({
@@ -82,19 +81,16 @@ if (document.documentElement.clientWidth < 800) {
   }
   w = document.documentElement.clientWidth / 1.5;
   h = window.innerHeight / 2.5;
-
 } else {
   w = document.documentElement.clientWidth / 3;
-
 }
-
 
 // light
 const light = new THREE.DirectionalLight(0xffffff, 2);
 light.position.set(100, 10, 5);
 scene1.add(light);
 
-const ambientLight = new THREE.AmbientLight(0xFF9A14);
+const ambientLight = new THREE.AmbientLight(0xff9a14);
 
 // camera
 const camera1 = new THREE.PerspectiveCamera(20, w / h);
@@ -119,7 +115,8 @@ scene2.add(camera5);
 // renderer
 const canvas1 = document.querySelector("#webgl1");
 const renderer1 = new THREE.WebGLRenderer({
-  canvas: canvas1, antialias: true
+  canvas: canvas1,
+  antialias: true,
 });
 renderer1.setSize(w, h);
 renderer1.setClearColor(0x0f0e0e, 0);
@@ -127,7 +124,8 @@ renderer1.render(scene1, camera1);
 
 const canvas2 = document.querySelector("#webgl2");
 const renderer2 = new THREE.WebGLRenderer({
-  canvas: canvas2, antialias: true
+  canvas: canvas2,
+  antialias: true,
 });
 renderer2.setSize(w, h);
 renderer2.setClearColor(0x0f0e0e, 0);
@@ -135,16 +133,17 @@ renderer2.render(scene1, camera1);
 
 const canvas3 = document.querySelector("#webgl3");
 const renderer3 = new THREE.WebGLRenderer({
-  canvas: canvas3, antialias: true
+  canvas: canvas3,
+  antialias: true,
 });
 renderer3.setSize(w, h);
 renderer3.setClearColor(0x0f0e0e, 0);
 renderer3.render(scene2, camera2);
 
-
 const canvas4 = document.querySelector("#webgl4");
 const renderer4 = new THREE.WebGLRenderer({
-  canvas: canvas4, antialias: true
+  canvas: canvas4,
+  antialias: true,
 });
 renderer4.setSize(w, h);
 renderer4.setClearColor(0x0f0e0e, 0);
@@ -152,7 +151,8 @@ renderer4.render(scene2, camera3);
 
 const canvas5 = document.querySelector("#webgl5");
 const renderer5 = new THREE.WebGLRenderer({
-  canvas: canvas5, antialias: true
+  canvas: canvas5,
+  antialias: true,
 });
 renderer5.setSize(w, h);
 renderer5.setClearColor(0x0f0e0e, 0);
@@ -160,7 +160,8 @@ renderer5.render(scene2, camera4);
 
 const canvas6 = document.querySelector("#webgl6");
 const renderer6 = new THREE.WebGLRenderer({
-  canvas: canvas6, antialias: true
+  canvas: canvas6,
+  antialias: true,
 });
 renderer6.setSize(w, h);
 renderer6.setClearColor(0x0f0e0e, 0);
@@ -317,8 +318,97 @@ elevation.forEach((elem) => {
     showElevation();
   });
 });
+const elevationLearnMore = document.getElementById("elevationLearnMore");
+const gravityLearnMore = document.getElementById("gravityLearnMore");
+const hydrogenLearnMore = document.getElementById("hydrogenLearnMore");
+const roughnessLearnMore = document.getElementById("roughnessLearnMore");
+
+elevationLearnMore.addEventListener("click", () => {
+  const typeMoon = {
+    name: "Digital​ ​Elevation​ ​Model",
+    img: "https://moon.nasa.gov/system/internal_resources/details/original/108_Copernicus_800x600.jpg",
+    figcaption: "​Copernicus crater viewed from orbit.",
+    description: `This​ ​dataset​ ​shows​ ​the​ ​Moon's​ ​topography.​ ​The​ ​LOLA​ ​instrument​
+    onboard​ ​LRO​ ​has​ ​measured​ ​the altitude​ ​of​ ​more​ ​than​ ​6​ ​billion​ ​points​ ​on​ ​the
+    ​lunar​ ​surface,​ ​so​ ​that​ ​scientists​ ​now​ ​have​ ​better​ ​topography for​ ​the​ ​Moon
+    ​than​ ​any​ ​other​ ​planetary​ ​body​ ​in​ ​the​ ​solar​ ​system!​ ​Red​ ​and​ ​white​ ​indicate
+    ​high​ ​altitudes and​ ​blue​ ​and​ ​purple​ ​indicate​ ​low​ ​altitudes.`,
+  };
+  displayPopup(typeMoon);
+});
+gravityLearnMore.addEventListener("click", () => {
+  const typeMoon = {
+    name: "Gravity​ ​Map",
+    img: "https://moon.nasa.gov/system/internal_resources/details/original/106_711351main_Zuber-3-pia16587-43_800-600.jpg",
+    figcaption: `​​This perspective, known as a Mercator projection, shows the
+    far side of the moon in the center and the near side (as viewed from Earth) at either side.`,
+    description: `Gravity​ ​field​ ​maps​ ​reveal​ ​features​ ​such​ ​as​ ​tectonic​ ​structures,
+    ​ ​volcanic​ ​landforms,​ ​basin​ ​rings,​ ​and crater​ ​central​ ​peaks.​ ​The​ ​moon's​ ​gravity
+    ​ ​field​ ​is​ ​unlike​ ​that​ ​of​ ​any​ ​terrestrial​ ​planet​ ​in​ ​our​ ​solar​ ​system.`,
+  };
+  displayPopup(typeMoon);
+});
+hydrogenLearnMore.addEventListener("click", () => {
+  const typeMoon = {
+    name: "Hydrogen​ ​Abundance",
+    img: "https://moon.nasa.gov/system/internal_resources/details/original/110_Water_Ice_800x600.jpg",
+    figcaption: `Areas of the moon's south pole with possibly high deposits of 
+    frozen water are colored blue in this map.`,
+    description: `Data​ ​confirmed​ ​hydrogen​ ​in​ ​the​ ​permanently​ ​shaded​ ​regions​ ​of
+    ​ ​the​ ​lunar​ ​poles​ ​is​ ​in​ ​the​ ​form​ ​of water-ice.​ ​This​ ​water-ice​ ​may​ ​be​ ​trapped​ ​indefinitely.`,
+  };
+  displayPopup(typeMoon);
+});
+roughnessLearnMore.addEventListener("click", () => {
+  const typeMoon = {
+    name: "Surface​ ​Roughness",
+    img: "https://moon.nasa.gov/system/internal_resources/details/original/111_555516main_053111a_800x600.jpg",
+    figcaption: "​​​Boulders clustered on the floor of Anaxagoras crater",
+    description: `This​ ​dataset​ ​shows​ ​the​ ​moon's​ ​surface​ ​roughness.​ ​Rough​ ​surfaces
+    ​ ​indicate​ ​the​ ​presence​ ​of​ ​large rocks,​ ​which​ ​may​ ​pose​ ​hazards​ ​for​ ​future​ ​lunar
+    ​ ​landers.​ ​The​ ​roughest​ ​surfaces​ ​are​ ​red​ ​and​ ​white​ ​while the​ ​smoother​ ​areas​ ​are​ ​blue.`,
+  };
+  displayPopup(typeMoon);
+});
+function displayPopup(typeMoon) {
+  const popupContent = `
+  <style>
+      body {
+          background: linear-gradient(0deg, rgba(5,26,70,1) 0%, rgba(43,2,85,1) 100%);
+          background-repeat: no-repeat;
+          color: #EDDCFF;
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          text-align:center;
+      }  
+      img{
+        width: 80vw;
+        heiht: auto;
+      } 
+      p{
+        width: 80vw;
+      }
+      .center{
+          display: flex;
+          justify-content: center;
+      }
+  </style>
+  <figure>
+    <img src="${typeMoon.img}" />
+    <figcaption>
+    <p><em>${typeMoon.figcaption}</em></p>
+    </figcaption>
+  </figure>
+  <h2>${typeMoon.name}</h2>
+  <div class="center">
+      <p>${typeMoon.description}</p>
+  </div>
+  `;
+
+  // Open a new window with the content
+  const popupWindow = window.open("", "EventPopup", "width=600,height=450");
+  popupWindow.document.body.innerHTML = popupContent;
+}
 
 loop1();
 loop2();
 showElevation();
-
