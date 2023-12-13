@@ -80,7 +80,7 @@ if (document.documentElement.clientWidth < 800) {
 
     const camera5 = new THREE.PerspectiveCamera(22, w / h);
   }
-  w = document.documentElement.clientWidth / 2.5;
+  w = document.documentElement.clientWidth / 1.5;
   h = window.innerHeight / 2.5;
 
 } else {
