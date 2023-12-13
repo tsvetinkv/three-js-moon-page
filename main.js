@@ -395,7 +395,9 @@ function displayPopup(typeMoon) {
   <figure>
     <img src="${typeMoon.img}" />
     <figcaption>
-    <p><em>${typeMoon.figcaption}</em></p>
+    <div class="center">
+      <p><em>${typeMoon.figcaption}</em></p>
+    </div>
     </figcaption>
   </figure>
   <h2>${typeMoon.name}</h2>
