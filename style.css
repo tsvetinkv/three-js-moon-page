@@ -3,7 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+html, body{
+  overflow-x: clip;
+}
 #verticalCard {
   display: none;
 }
@@ -16,15 +18,18 @@
   overflow: hidden;
 }
 
-@media screen and (max-width: 800px) {
-  .canvas-container {
-    order: 2;
-  }
+.uk-card-secondary {
+  background: rgb(10,14,42);
+  background: linear-gradient(90deg, rgba(10,14,42,1) 0%, rgba(11,15,44,1) 50%, rgba(22,27,57,1) 100%);
 }
 
-.uk-card {
-  background: rgb(90, 89, 88);
-  background: linear-gradient(0deg, rgb(30, 30, 30) 0%, rgb(35, 35, 35) 50%, rgb(40, 40, 40) 100%);
+.uk-card-primary {
+  background: rgb(43,2,85);
+  background: linear-gradient(90deg, rgba(43,2,85,1) 0%, rgba(32,14,78,1) 50%, rgba(5,26,70,1) 100%);
+}
+
+.gravity, .hydrogen, .roughness, .elevation{
+  margin: 10px;
 }
 
 .scale {
@@ -40,7 +45,7 @@
   display: block;
 }
 
-.units {
+.units, .unitsEl {
   text-align: center;
   width: 77%;
 }
@@ -50,7 +55,17 @@
   width: 58%;
 }
 
+.learnMore {
+  margin-right: 8vw;
+}
+@media (min-width: 640px) and (max-width: 800px){
+  .units, .unitsSmall{margin-top: 65%;}
+}
 @media (max-width:800px) {
+  .canvas-container {
+    order: 2;
+  }
+
   #verticalCard {
     display: block;
   }
@@ -69,7 +84,7 @@
     width: 90vw;
   }
 
-  .units {
+  .units, .unitsEl {
     width: 90vw;
   }
 
@@ -79,5 +94,9 @@
 
   #elevationCard, #gravityCard, #hydrogenCard, #roughnessCard, .canvas-container {
     text-align: center;
+  }
+
+  .learnMore {
+    margin-right: 0;
   }
 }

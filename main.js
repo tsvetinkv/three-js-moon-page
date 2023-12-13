@@ -63,12 +63,30 @@ const mesh5 = new THREE.Mesh(geometry, roughnessMaterial);
 
 // sizes
 let w;
+let h = window.innerHeight / 2;
 if (document.documentElement.clientWidth < 800) {
-  w = document.documentElement.clientWidth;
+  if (document.documentElement.clientWidth > 640) {
+    const camera2 = new THREE.PerspectiveCamera(22, w / h);
+    camera2.position.z = 20;
+    scene2.add(camera2);
+
+    const camera3 = new THREE.PerspectiveCamera(22, w / h);
+    camera3.position.z = 20;
+    scene2.add(camera3);
+
+    const camera4 = new THREE.PerspectiveCamera(22, w / h);
+    camera4.position.z = 20;
+    scene2.add(camera4);
+
+    const camera5 = new THREE.PerspectiveCamera(22, w / h);
+  }
+  w = document.documentElement.clientWidth / 2.5;
+  h = window.innerHeight / 2.5;
+
 } else {
   w = document.documentElement.clientWidth / 3;
+
 }
-let h = window.innerHeight / 2;
 
 
 // light
@@ -182,8 +200,17 @@ controls6.enableZoom = false;
 // window resize
 window.addEventListener("resize", () => {
   if (document.documentElement.clientWidth < 800) {
-    w = document.documentElement.clientWidth / 1;
-    h = window.innerHeight/ 2;
+    w = document.documentElement.clientWidth;
+    h = window.innerHeight / 2;
+    camera1.fov = 22;
+    camera2.fov = 22;
+    camera3.fov = 22;
+    camera4.fov = 22;
+    camera5.fov = 22;
+    if (document.documentElement.clientWidth > 640) {
+      w = document.documentElement.clientWidth / 2.5;
+      h = window.innerHeight / 2.5;
+    }
   } else {
     w = document.documentElement.clientWidth / 3;
   }
