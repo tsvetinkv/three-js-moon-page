@@ -10,7 +10,9 @@
   <link rel="stylesheet" href="./uikit-3.17.11/css/uikit-rtl.css" />
   <link rel="stylesheet" href="./uikit-3.17.11/css/uikit-rtl.min.css" />
   <link rel="stylesheet" href="./uikit-3.17.11/css/uikit.min.css" />
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tai+Tham&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -26,7 +28,8 @@
         <div class="uk-card-body uk-width-1-1">
           <h1 class="uk-heading-small" style="color: #debeff">Do you want to learn about the moon?</h1>
           <hr>
-          <p class="uk-text-center\@s uk-text-center\@m uk-text-center\@l uk-text-center\@xl uk-text-lead uk-text-light" style="color: #eedfff;">
+          <p class="uk-text-center\@s uk-text-center\@m uk-text-center\@l uk-text-center\@xl uk-text-lead uk-text-light"
+            style="color: #eedfff;">
             If you want to learn more about the moon phases,
             events and much more then check this page
           </p>
@@ -42,7 +45,7 @@
       </div>
     </div>
     <div class="uk-card-body">
-      <h1 class="uk-heading-small uk-text-center"  style="color: #debeff">Do you want to learn about the moon?</h1>
+      <h1 class="uk-heading-small uk-text-center" style="color: #debeff">Do you want to learn about the moon?</h1>
       <hr>
       <p class="uk-text-center" style="color: #eedfff;">
         If you want to learn more about the moon phases,
@@ -51,7 +54,16 @@
     </div>
   </div>
 
-  <h1 class="uk-heading-medium uk-text-center uk-light">Data Maps</h1>
+  <div uk-navbar="" class="uk-navbar">
+    <div class="uk-navbar-center">
+      <ul class="uk-navbar-nav">
+        <li class="uk-active"><a href="#">Moon maps</a></li>
+        <li><a href="./formation/index.html">Moon formation</a></li>
+        <li><a href="">Moon pahses</a></li>
+        <li><a href="">Eclipses</a></li>
+      </ul>
+    </div>
+  </div>
 
   <div class="uk-card uk-card-primary uk-grid-collapse uk-child-width-1-3@s uk-grid" uk-grid id="elevationCard"
     style="justify-content: center;">
@@ -86,7 +98,8 @@
     </div>
   </div>
 
-  <div class="uk-card uk-card-primary uk-grid-collapse uk-child-width-1-3@s uk-grid" uk-grid id="gravityCard" style="justify-content: center;">
+  <div class="uk-card uk-card-primary uk-grid-collapse uk-child-width-1-3@s uk-grid" uk-grid id="gravityCard"
+    style="justify-content: center;">
     <div class="uk-flex-last@s uk-card-media-right uk-cover-container">
       <div class="canvas-container">
         <canvas id="webgl4"></canvas>
@@ -116,7 +129,8 @@
       </div>
     </div>
   </div>
-  <div class="uk-card uk-card-primary uk-grid-collapse uk-child-width-1-3@s uk-grid" uk-grid id="hydrogenCard" style="justify-content: center;">
+  <div class="uk-card uk-card-primary uk-grid-collapse uk-child-width-1-3@s uk-grid" uk-grid id="hydrogenCard"
+    style="justify-content: center;">
     <div class="uk-flex-last@s uk-card-media-right uk-cover-container">
       <div class="canvas-container">
         <canvas id="webgl5"></canvas>
@@ -146,7 +160,8 @@
       </div>
     </div>
   </div>
-  <div class="uk-card uk-card-primary uk-grid-collapse uk-child-width-1-3@s uk-grid" uk-grid id="roughnessCard" style="justify-content: center;">
+  <div class="uk-card uk-card-primary uk-grid-collapse uk-child-width-1-3@s uk-grid" uk-grid id="roughnessCard"
+    style="justify-content: center;">
     <div class="uk-flex-last@s uk-card-media-right uk-cover-container">
       <div class="canvas-container">
         <canvas id="webgl6"></canvas>

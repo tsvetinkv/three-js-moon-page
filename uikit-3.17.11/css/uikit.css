@@ -5327,15 +5327,15 @@ ul.uk-nav-sub {
  */
 .uk-navbar-nav > li:hover > a,
 .uk-navbar-nav > li > a[aria-expanded="true"] {
-  color: #666;
+  color: #95B2F6;
 }
 /* OnClick */
 .uk-navbar-nav > li > a:active {
-  color: #333;
+  color: #E6CEFF;
 }
 /* Active */
 .uk-navbar-nav > li.uk-active > a {
-  color: #333;
+  color: #E6CEFF;
 }
 /* Parent icon modifier
  ========================================================================== */
@@ -5350,7 +5350,7 @@ ul.uk-nav-sub {
  ========================================================================== */
 .uk-navbar-item {
   padding: 0 0;
-  color: #666;
+  color: #95B2F6;
 }
 /*
  * Remove margin from the last-child
