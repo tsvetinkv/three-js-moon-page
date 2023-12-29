@@ -9,7 +9,7 @@ body {
   overflow-x: clip;
 }
 
-body {
+html {
   background: linear-gradient(0deg, rgb(38, 2, 73) 0%, rgb(4, 20, 56) 100%);
   font-family: "Noto Sans Tai Tham", sans-serif;
 }
