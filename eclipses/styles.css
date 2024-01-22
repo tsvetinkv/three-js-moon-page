@@ -1,3 +1,12 @@
+html {
+    background: rgb(38, 2, 73) !important;
+}
+
+body {
+    background: linear-gradient(0deg, rgb(38, 2, 73) 0%, rgb(4, 20, 56) 100%)!important;
+    font-family: 'Raleway', sans-serif !important;
+}
+
 .text-medium {
     font-size: 1.45vw;
     line-height: 180%;
@@ -59,8 +68,14 @@ td h2 {
         display: grid;
     }
 
+    td img {
+        width: 100% !important;
+        height: 100%;
+    }
+
     .text-medium {
         font-size: 4.5vw;
+        margin-left: 0;
     }
 
     .uk-column-1-2 {

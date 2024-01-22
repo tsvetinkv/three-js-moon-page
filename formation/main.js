@@ -1,8 +1,8 @@
 import "/style.css";
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
-import moonTexture from "/assets/moon-texture.jpg";
-import moonDisplacementMap from "/assets/moon-displacement.jpg";
+import moonTexture from "../assets/moon-texture.jpg";
+import moonDisplacementMap from "../assets/moon-displacement.jpg";
 
 const scene1 = new THREE.Scene();
 

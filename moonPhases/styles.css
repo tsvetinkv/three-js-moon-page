@@ -4,9 +4,8 @@
     color: aliceblue;
 }
 
-.section {
+section {
     padding: 3%;
-
 }
 
 td img {
@@ -17,6 +16,10 @@ td h2 {
     color: #9eb8f4;
 }
 
+td p {
+    font-size: 1.15rem;
+}
+
 #eartshine {
     width: 34vw;
 }
@@ -25,24 +28,68 @@ td h2 {
     width: 26vw;
 }
 
-#rightAlign {
+#daytimeMoonHeading {
     text-align: right;
     color: #debeff;
 }
 
-@media (min-width: 550px) and (max-width:965px) {
+@media (min-width: 1009px) and (max-width:1050px) {
+    .text-medium {
+        font-size: 1.05rem;
+    }
+}
+
+@media (min-width: 850px) and (max-width:1009px) {
+    .text-medium {
+        font-size: 2vw;
+    }
+
+    #eartshineHeading,
+    #daytimeMoonHeading{
+        font-size: 3.5vw;
+    }
+}
+
+@media (min-width: 600px) and (max-width:850px) {
+    .text-medium {
+        font-size: 2.6vw;
+    }
+
+    #eartshineHeading,
+    #daytimeMoonHeading{
+        font-size: 4vw;
+    }
+}
+
+@media (min-width: 550px) and (max-width:600px) {
+    .text-medium {
+        font-size: 3vw;
+    }
+}
+
+@media (min-width: 550px) and (max-width:1009px) {
     td img {
         width: 200rem;
     }
 
-    .text-medium {
-        font-size: 2.5vw;
+    h2,
+    #daytimeMoonHeading {
+        text-align: center;
     }
 
     #eartshine,
     #daytimeMoon {
         width: auto;
         text-align: center;
+    }
+
+    #daytimeMoon {
+        float: none;
+        margin: 0;
+    }
+
+    #earthshineP{
+        margin-left: 0;
     }
 }
 
@@ -51,8 +98,20 @@ td h2 {
         display: grid;
     }
 
+    td img,
+    img {
+        width: 100% !important;
+        height: 100%;
+    }
+
+    figure figcaption {
+        text-align: justify;
+    }
+
     .text-medium {
-        font-size: 4.5vw;
+        font-size: 3.5vw;
+        text-align: justify;
+        margin: 0;
     }
 
     .uk-column-1-2 {
@@ -61,13 +120,24 @@ td h2 {
 
     #eartshine,
     #daytimeMoon,
-    #rightAlign,
+    #daytimeMoonHeading,
     #eartshineHeading {
         width: auto;
         text-align: center;
     }
 
-    #daytimeMoon{
+    #daytimeMoon {
         margin: 0;
+    }
+}
+
+@media (max-width: 450px){
+    .text-medium {
+        font-size: 5vw;
+    }
+    
+    #eartshineHeading,
+    #daytimeMoonHeading{
+        font-size: 1.9rem;
     }
 }
